@@ -15,6 +15,10 @@ jobs:
           command: bundle -v
       - ruby/bundle-install
       - run: ruby test_sample.rb
+  notify:
+    docker:
+      - image: 'cimg/base:stable'
+    steps:    
       - slack/notify:
           custom: |
             {
