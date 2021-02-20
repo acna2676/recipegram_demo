@@ -17,7 +17,7 @@ jobs:
       - run: ruby test_sample.rb
   notify:
     docker:
-      - image: 'cimg/base:stable'
+      - image: cimg/base:stable
     steps:    
       - slack/notify:
           custom: |
